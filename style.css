@@ -109,13 +109,10 @@ a {
 }
 
 .brand-name {
-    font-weight: 800;
-    font-size: 1.02rem;
-    color: var(--blue-deep);
+    display: none;
 }
 
 .brand-line {
-    margin-top: 4px;
     color: var(--copper);
     max-width: 250px;
     font-size: 0.72rem;
@@ -1212,10 +1209,6 @@ a {
     .brand-logo {
         width: 64px;
         height: 40px;
-    }
-
-    .brand-name {
-        font-size: 0.94rem;
     }
 
     .brand-line {

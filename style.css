@@ -910,6 +910,43 @@ a {
     fill: currentColor;
 }
 
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 96px;
+    z-index: 89;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(21, 95, 158, 0.2);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, opacity 180ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    transform: translateY(-1px);
+    background: var(--blue-deep);
+    box-shadow: 0 4px 12px rgba(21, 95, 158, 0.28);
+}
+
+.back-to-top svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
 .reveal-item {
     opacity: 0;
     transform: translateY(18px);
@@ -1288,6 +1325,32 @@ a {
     .organogram-card h2,
     .contact h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .floating-whatsapp svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 80px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .back-to-top svg {
+        width: 16px;
+        height: 16px;
     }
 }
 

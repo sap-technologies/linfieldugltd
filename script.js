@@ -198,3 +198,21 @@ if (careersForm) {
         careersForm.reset();
     });
 }
+
+// Back to top button handler
+const backToTopButton = document.getElementById("back-to-top");
+
+if (backToTopButton) {
+    window.addEventListener("scroll", () => {
+        const isVisible = window.scrollY > 300;
+        backToTopButton.classList.toggle("visible", isVisible);
+    });
+
+    backToTopButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}

@@ -1211,7 +1211,8 @@ a {
     }
 
     .brand-line {
-        font-size: 0.66rem;
+        font-size: 0.62rem;
+        max-width: 220px;
     }
 
     .nav-toggle {
@@ -1306,7 +1307,8 @@ a {
 
 @media (max-width: 540px) {
     .brand-line {
-        display: none;
+        font-size: 0.6rem;
+        max-width: 200px;
     }
 }
 

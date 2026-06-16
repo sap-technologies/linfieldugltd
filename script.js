@@ -103,6 +103,13 @@ if (contactForm) {
         event.preventDefault();
 
         const formData = new FormData(contactForm);
+        const contactMethod = String(formData.get("contact-method") || "").trim();
+
+        if (!contactMethod) {
+            alert("Please select a contact method.");
+            return;
+        }
+
         const details = {
             name: String(formData.get("name") || "").trim(),
             email: String(formData.get("email") || "").trim(),
@@ -120,7 +127,7 @@ if (contactForm) {
             return;
         }
 
-        const whatsappText = [
+        const messageText = [
             "Hello Linfield Uganda, I would like to request a service.",
             "",
             `Name: ${details.name}`,
@@ -133,7 +140,61 @@ if (contactForm) {
             `Message: ${details.message}`
         ].filter((line) => line !== null).join("\n");
 
-        window.open(`https://wa.me/256781449714?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener");
+        if (contactMethod === "whatsapp") {
+            window.open(`https://wa.me/256781449714?text=${encodeURIComponent(messageText)}`, "_blank", "noopener");
+        } else if (contactMethod === "email") {
+            window.open(`mailto:linfiedug@gmail.com?subject=Service Request - ${encodeURIComponent(details.service)}&body=${encodeURIComponent(messageText)}`);
+        }
+
         contactForm.reset();
+    });
+}
+
+// Careers form handler
+const careersForm = document.getElementById("careersForm");
+
+if (careersForm) {
+    careersForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(careersForm);
+        const contactMethod = String(formData.get("contact-method") || "").trim();
+
+        if (!contactMethod) {
+            alert("Please select a contact method.");
+            return;
+        }
+
+        const details = {
+            name: String(formData.get("name") || "").trim(),
+            email: String(formData.get("email") || "").trim(),
+            phone: String(formData.get("phone") || "").trim(),
+            message: String(formData.get("message") || "").trim()
+        };
+
+        const requiredFields = ["name", "email", "phone", "message"];
+
+        if (requiredFields.some((field) => details[field].length === 0)) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        const messageText = [
+            "Hello Linfield Uganda, I am interested in joining your team.",
+            "",
+            `Name: ${details.name}`,
+            `Email: ${details.email}`,
+            `Phone: ${details.phone}`,
+            "",
+            `Message: ${details.message}`
+        ].join("\n");
+
+        if (contactMethod === "whatsapp") {
+            window.open(`https://wa.me/256781449714?text=${encodeURIComponent(messageText)}`, "_blank", "noopener");
+        } else if (contactMethod === "email") {
+            window.open(`mailto:linfiedug@gmail.com?subject=Career Inquiry - ${encodeURIComponent(details.name)}&body=${encodeURIComponent(messageText)}`);
+        }
+
+        careersForm.reset();
     });
 }

@@ -67,7 +67,6 @@ const revealTargets = [
     ".objectives-strip span",
     ".process-list article",
     ".clients-grid span",
-    ".organogram-card",
     ".contact-intro",
     ".contact-form",
     ".footer-main > *"

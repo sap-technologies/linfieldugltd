@@ -255,7 +255,6 @@ a {
 .section-heading h2,
 .two-column h2,
 .approach h2,
-.organogram-card h2,
 .contact h2 {
     margin: 0;
     color: var(--ink);
@@ -416,14 +415,12 @@ a {
 .two-column h2,
 .section-heading h2,
 .approach h2,
-.organogram-card h2,
 .contact h2 {
     font-size: clamp(2rem, 3.5vw, 3.2rem);
 }
 
 .section-copy > p,
 .section-heading > p,
-.organogram-card p,
 .contact-intro > p,
 .dark-copy {
     margin: 18px 0 0;
@@ -769,17 +766,6 @@ a {
     border-radius: var(--radius);
     color: var(--ink-soft);
     font-weight: 800;
-}
-
-.organogram-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    padding: 36px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
 }
 
 .contact-grid {
@@ -1186,11 +1172,6 @@ a {
         min-height: auto;
     }
 
-    .organogram-card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
     .footer-main {
         grid-template-columns: 1fr 1fr;
     }
@@ -1269,8 +1250,7 @@ a {
     }
 
     .hero-panel,
-    .contact-form,
-    .organogram-card {
+    .contact-form {
         padding: 22px;
     }
 
@@ -1326,7 +1306,6 @@ a {
     .two-column h2,
     .section-heading h2,
     .approach h2,
-    .organogram-card h2,
     .contact h2 {
         font-size: 2rem;
     }

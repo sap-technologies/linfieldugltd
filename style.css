@@ -1010,6 +1010,14 @@ a {
     max-width: 360px;
 }
 
+.footer-slogan {
+    color: var(--copper);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 8px !important;
+    text-transform: uppercase;
+}
+
 .footer-actions {
     display: flex;
     flex-wrap: wrap;

@@ -243,7 +243,7 @@ a {
 .section-label,
 .panel-kicker {
     margin: 0 0 12px;
-    color: var(--blue-deep);
+    color: var(--yellow);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0;
@@ -330,8 +330,12 @@ a {
     position: relative;
     min-height: 440px;
     padding: 34px;
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background-image:
+        url('images/introduction.png'),
+        linear-gradient(90deg, rgba(18, 33, 47, 0.65), rgba(18, 33, 47, 0.65)),
+        repeating-linear-gradient(135deg, rgba(16, 75, 145, 0.08) 0 1px, transparent 1px 18px);
+    background-size: cover;
+    background-position: center;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     display: grid;
@@ -370,7 +374,7 @@ a {
 .service-snapshot li {
     position: relative;
     padding-left: 28px;
-    color: var(--ink-soft);
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -395,17 +399,17 @@ a {
 
 .hero-metrics span {
     padding: 14px 10px;
-    background: var(--mist);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
-    color: var(--ink-soft);
+    color: #ffffff;
     text-align: center;
     font-size: 0.9rem;
 }
 
 .hero-metrics strong {
     display: block;
-    color: var(--blue-deep);
+    color: var(--yellow);
 }
 
 .two-column {

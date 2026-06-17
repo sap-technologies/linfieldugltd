@@ -551,9 +551,26 @@ a {
 }
 
 .service-card {
-    min-height: 156px;
-    padding: 24px;
+    min-height: auto;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
     transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card > h4,
+.service-card > p {
+    padding: 0 24px;
+}
+
+.service-card > h4:first-of-type {
+    padding-top: 16px;
+}
+
+.service-card > p:last-of-type {
+    padding-bottom: 24px;
 }
 
 .service-card:hover {
@@ -565,6 +582,26 @@ a {
 .service-card-urgent {
     border-color: rgba(167, 101, 52, 0.38);
     background: linear-gradient(180deg, #fff, var(--warm));
+}
+
+.service-image {
+    width: 100%;
+    height: clamp(160px, 25vw, 280px);
+    margin: 0 0 16px 0;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .service-reassurance {
@@ -967,6 +1004,39 @@ a {
     }
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 20vw, 280px), 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--line);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(18, 33, 47, 0.08);
+    transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(18, 33, 47, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 .site-footer {
     background:
         linear-gradient(135deg, rgba(18, 57, 94, 0.96), rgba(23, 35, 49, 1)),
@@ -1252,6 +1322,25 @@ a {
     .hero-panel,
     .contact-form {
         padding: 22px;
+    }
+
+    .service-image {
+        height: clamp(120px, 45vw, 200px);
+        margin: 0 0 12px 0;
+    }
+
+    .service-card > h4,
+    .service-card > p {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .service-card > h4:first-of-type {
+        padding-top: 12px;
+    }
+
+    .service-card > p:last-of-type {
+        padding-bottom: 22px;
     }
 
     .hero-metrics {

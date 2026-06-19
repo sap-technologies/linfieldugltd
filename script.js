@@ -198,6 +198,32 @@ if (careersForm) {
     });
 }
 
+// Gallery filter handler
+const galleryFilterSelect = document.getElementById("galleryFilter");
+const galleryItems = [...document.querySelectorAll(".gallery-item")];
+
+const galleryServiceGroups = {
+    all: ["commercial", "residential", "upholstery", "electrical"],
+    cleaning: ["commercial", "residential", "upholstery"],
+    electrical: ["electrical"]
+};
+
+function updateGalleryDisplay(filterKey) {
+    const activeServices = galleryServiceGroups[filterKey] || galleryServiceGroups.all;
+    galleryItems.forEach((item) => {
+        const service = item.dataset.service;
+        item.hidden = !activeServices.includes(service);
+    });
+}
+
+if (galleryFilterSelect) {
+    galleryFilterSelect.addEventListener("change", (event) => {
+        updateGalleryDisplay(event.currentTarget.value);
+    });
+    updateGalleryDisplay(galleryFilterSelect.value || "all");
+}
+
+
 // Back to top button handler
 const backToTopButton = document.getElementById("back-to-top");
 

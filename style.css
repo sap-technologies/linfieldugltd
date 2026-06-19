@@ -239,6 +239,10 @@ a {
     align-items: center;
 }
 
+#gallery-hero .eyebrow {
+    color: var(--blue-deep);
+}
+
 .eyebrow,
 .section-label,
 .panel-kicker {
@@ -1011,11 +1015,23 @@ a {
     }
 }
 
+.gallery-filters {
+    margin-top: 28px;
+    display: grid;
+    gap: 10px;
+    max-width: 420px;
+}
+
+.gallery-filters label {
+    font-weight: 700;
+    color: var(--ink);
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 20vw, 280px), 1fr));
     gap: 16px;
-    margin-top: 28px;
+    margin-top: 18px;
 }
 
 .gallery-item {

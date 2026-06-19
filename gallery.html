@@ -80,62 +80,71 @@
                     <p>From commercial premises to residential spaces, we deliver consistent, professional results. Here's a glimpse of our recent work.</p>
                 </div>
 
-                <div class="gallery-grid">
-                    <div class="gallery-item">
+                <div class="gallery-filters">
+                    <label for="galleryFilter">Filter by service</label>
+                    <select id="galleryFilter" name="galleryFilter">
+                        <option value="all">All photos</option>
+                        <option value="cleaning">Cleaning services</option>
+                        <option value="electrical">Electrical engineering</option>
+                    </select>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item" data-service="commercial">
                         <img src="images/Commercial cleaning. Cleaning of pavers.png" alt="Commercial cleaning - Pavers cleaning service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="commercial">
                         <img src="images/Commercial cleaning. Rooftile cleaning.png" alt="Commercial cleaning - Roof tile cleaning service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="residential">
                         <img src="images/Residential cleaning.png" alt="Residential cleaning service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="upholstery">
                         <img src="images/Upholstery cleaning. Carpet cleaning.png" alt="Upholstery cleaning - Carpet cleaning" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="upholstery">
                         <img src="images/Upholstery cleaning. Carpet cleaning2.png" alt="Upholstery cleaning - Carpet cleaning service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="upholstery">
                         <img src="images/Upholstery Cleaning. Sofa cleaning.png" alt="Upholstery cleaning - Sofa cleaning" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/electrical-installations.png" alt="Electrical engineering - Installations service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/Maintenance&Troubleshooting.png" alt="Electrical engineering - Maintenance and troubleshooting" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/Distribution-Boards.png" alt="Electrical engineering - Distribution boards" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/protection-systems.png" alt="Electrical engineering - Protection systems" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/electrical-inspections.png" alt="Electrical engineering - Inspections" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/preventive-maintenance.png" alt="Electrical engineering - Preventive maintenance" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/Generator-installation.png" alt="Electrical engineering - Generator installation service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/House-wiring&equipment-installations.png" alt="Electrical engineering - House wiring and equipment installations" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/AC-maintenance.png" alt="Electrical engineering - AC maintenance and service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/Installations.png" alt="Electrical engineering - Additional installations" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/electrical-distribution.png" alt="Electrical engineering - Distribution systems" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/inspections.png" alt="Electrical engineering - Inspections service" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-service="electrical">
                         <img src="images/ac-maintenance2.png" alt="Electrical engineering - AC maintenance service" loading="lazy">
                     </div>
                 </div>
@@ -262,6 +271,11 @@
                     <a class="social-link" href="https://www.tiktok.com/@linfield.ug.ltd?_r=1&_t=ZS-97GRP5kk8gb" target="_blank" rel="noopener noreferrer" aria-label="Linfield Uganda on TikTok">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M15.8 2.5c.28 2.3 1.58 3.82 3.8 4.28v3.02a7.3 7.3 0 0 1-3.72-1.14v6.62c0 3.32-2.14 5.72-5.38 5.72-2.88 0-5.1-2.08-5.1-4.9 0-3.18 2.6-5.2 5.78-4.72v3.1c-1.34-.42-2.6.38-2.6 1.64 0 1.02.84 1.76 1.9 1.76 1.24 0 2.1-.78 2.1-2.36V2.5h3.22Z"/>
+                        </svg>
+                    </a>
+                    <a class="social-link" href="https://www.linkedin.com/company/linfield-uganda-limited/" target="_blank" rel="noopener noreferrer" aria-label="Linfield Uganda on LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.83h5V24H0V8.83zm7.59 0H12v2.13h.07c.49-.92 1.69-1.89 3.48-1.89 3.72 0 4.4 2.45 4.4 5.64V24h-5v-7.6c0-1.81-.03-4.15-2.53-4.15-2.54 0-2.93 1.98-2.93 4.02V24h-5V8.83z"/>
                         </svg>
                     </a>
                     <a class="social-link is-placeholder" href="#" data-social-placeholder aria-disabled="true" aria-label="Linfield Uganda on X" title="Add official X profile link">

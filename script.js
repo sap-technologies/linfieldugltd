@@ -201,6 +201,7 @@ if (careersForm) {
 // Gallery filter handler
 const galleryFilterSelect = document.getElementById("galleryFilter");
 const galleryItems = [...document.querySelectorAll(".gallery-item")];
+const galleryFilterStatus = document.getElementById("galleryFilterStatus");
 
 const galleryServiceGroups = {
     all: ["commercial", "residential", "upholstery", "electrical"],
@@ -210,10 +211,18 @@ const galleryServiceGroups = {
 
 function updateGalleryDisplay(filterKey) {
     const activeServices = galleryServiceGroups[filterKey] || galleryServiceGroups.all;
+    let visibleCount = 0;
+
     galleryItems.forEach((item) => {
         const service = item.dataset.service;
-        item.hidden = !activeServices.includes(service);
+        const isVisible = activeServices.includes(service);
+        item.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
     });
+
+    if (galleryFilterStatus) {
+        galleryFilterStatus.textContent = `${visibleCount} ${visibleCount === 1 ? "photo" : "photos"} shown`;
+    }
 }
 
 if (galleryFilterSelect) {

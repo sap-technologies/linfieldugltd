@@ -1047,6 +1047,10 @@ a {
     transition: transform 240ms ease, box-shadow 240ms ease;
 }
 
+.gallery-item[hidden] {
+    display: none;
+}
+
 .gallery-item:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(18, 33, 47, 0.12);

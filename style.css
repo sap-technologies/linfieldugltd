@@ -214,12 +214,11 @@ a {
     position: relative;
     overflow: hidden;
     background-image:
-        url('images/introduction.png'),
+        url('images/introduction.webp'),
         linear-gradient(90deg, rgba(18, 33, 47, 0.65), rgba(18, 33, 47, 0.65)),
         repeating-linear-gradient(135deg, rgba(16, 75, 145, 0.08) 0 1px, transparent 1px 18px);
     background-size: cover;
     background-position: center 27%;
-    background-attachment: fixed;
 }
 
 .hero::after {
@@ -335,7 +334,7 @@ a {
     min-height: 440px;
     padding: 34px;
     background-image:
-        url('images/introduction.png'),
+        url('images/introduction.webp'),
         linear-gradient(90deg, rgba(18, 33, 47, 0.65), rgba(18, 33, 47, 0.65)),
         repeating-linear-gradient(135deg, rgba(16, 75, 145, 0.08) 0 1px, transparent 1px 18px);
     background-size: cover;
